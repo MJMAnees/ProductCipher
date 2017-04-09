@@ -9,16 +9,14 @@ package productchiper;
  *
  * @author Isham
  */
-public class ProductChiper {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        byte[] b = "A".getBytes();
-        for (byte c : b) {
-            System.out.print(c);
-        }
+public class KeyGenerator {
+    private static String currentKey;
+    public static void setKey(String key){
+        KeyGenerator.currentKey=key;
     }
+    public static String getKey(){
+        return KeyGenerator.currentKey;
+    }
+    
     
 }
