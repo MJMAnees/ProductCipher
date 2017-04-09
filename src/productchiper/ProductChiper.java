@@ -15,10 +15,11 @@ public class ProductChiper {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        byte[] b = "A".getBytes();
-        for (byte c : b) {
-            System.out.print(c);
+        System.out.println(AsciiTranslator.textToAscii("isham"));
+        for (int arg : AsciiTranslator.textToAscii("isham")) {
+            System.out.println(arg);
         }
+        System.out.println(AsciiTranslator.asciiToText(AsciiTranslator.textToAscii("isham")));
     }
     
 }
