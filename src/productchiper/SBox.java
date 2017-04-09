@@ -60,5 +60,22 @@ public class SBox {
         int col=x%0x10;
         return invsbox[row][col];
     }
+     public static int[] GetSBoxValue(int[] x){
+        //this returns the subtitiution value for a 2 dogit hexa decimal number
+        int[] y=new int[x.length];
+         for (int i=0;i<x.length;i++ ) {
+             y[i]=GetSBoxValue(x[i]);
+         }
+        return y;
+    }
+     public static int[] GetInvSBoxValue(int[] x){
+         //this returns the real hexa decimal number for a subsitutute value
+        int[] y=new int[x.length];
+         for (int i=0;i<x.length;i++ ) {
+             y[i]=GetInvSBoxValue(x[i]);
+         }
+       return y;
+    }
+    
 
 }
