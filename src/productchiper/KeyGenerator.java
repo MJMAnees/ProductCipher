@@ -20,6 +20,7 @@ public class KeyGenerator {
         return KeyGenerator.currentKey;
     }
     public static String generateKey(int roundNumber){
+        System.out.println(currentKey);
         return shift(byteKey.substring(0,64),roundNumber)+shift(byteKey.substring(64,128),roundNumber);
         
     }

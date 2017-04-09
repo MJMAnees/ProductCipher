@@ -160,6 +160,7 @@ public class Home extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         try{
+         key=jTextField1.getText();
         ProductChiper.doEncrypt(file, directory, key);
         }catch(NullPointerException e){
             
@@ -177,7 +178,7 @@ public class Home extends javax.swing.JFrame {
         String Filename=f.getAbsolutePath();
         file=Filename;
         directory=chooser.getCurrentDirectory().getAbsolutePath();
-        key=jLabel1.getText();
+       
         jTextField2.setText(Filename);
         
        }catch(NullPointerException e){
@@ -188,6 +189,7 @@ public class Home extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         try{
+             key=jTextField1.getText();
         ProductChiper.doDecrypt(file, directory, key);
         }catch(NullPointerException e){
             
